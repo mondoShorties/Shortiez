@@ -54,7 +54,7 @@ myApp.config(['$routeProvider', function($routeProvider){
           templateUrl: '/views/pages/userStats.html'
       })
       .otherwise({
-      redirectTo: '/login'
+      redirectTo: '/adminLibrary'
     }); // end $routeProvider
 
 }]); // end myApp

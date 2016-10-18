@@ -17,18 +17,19 @@
  	100% { transform: scale(1); }
  }
  body, html{
-   /*background-color: #f7f3ee;*/
-   background: url(../views/images/urbanwatercoloredit.jpg);
+   background-color: #252526;
+   /*background: url(../views/images/urbanwatercoloredit.jpg);*/
    /*background: url(../views/images/watercolorback.jpg);*/
    background-attachment: fixed;
    background-size: cover;
    height: 100%;
    font-size: 1em;
+   font-family: Comic Sans MS;
  }
 
 
  /*---------------------------------    nav bar   -------------------------------------*/
-.logoInvert{
+.logoblack{
   height: 50px;
   width: 150px;
   margin-left: 5px;
@@ -62,14 +63,7 @@
    height: 50px;
  }
 
-#logoutBtn{
-  /*position: absolute;*/
-  float: right;
-  margin-top: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: #3FBFBF;
-}
+
 #userB{
   background-color: #BF3FBF;
   padding-left: 5px;
@@ -83,6 +77,7 @@
 #adminB {
   background-color: #5EAF5E;
   padding-left: 5px;
+  float: right;
 }
 #adminB:hover{
   background-color: #3FBFBF;
@@ -96,8 +91,16 @@
 #manageB:hover{
   background-color: #3FBFBF;
 }
+#logoutBtn{
+  /*position: absolute;*/
+  float: right;
+  margin-top: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #3FBFBF;
+}
  .navbar-default{
-   background-color: black;
+   background-color: white;
     /*background-color: #118cc3;--blue*/
     /*background-color: #64bbcc;*/
     padding-top: 10px;
@@ -175,7 +178,10 @@
   }
   .storyPage {
     border-radius: 6px;
-    font-size: 1.25em;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    line-height: 225%;
+    width: 90%;
     position: relative;
      height: 50vw;
      width: 71vw;
@@ -302,7 +308,7 @@
   background-color: #5f3cb0; /* purple */
 }
 .smallClass{
- font-size: 1.5em;
+ font-size: 1.0em;
  letter-spacing: 2px;
  line-height: 225%;
  width: 90%;
@@ -374,10 +380,12 @@
 #libraryMain{
   padding: 10px;
   margin: 40px;
-  background-color: rgba(250, 250, 250, 0.9);
+  /*background-color: rgba(250, 250, 250, 0.9);*/
+  background-color: black;
 }
 #libraryInstructions{
   padding: 20px;
+  color: white;
 }
 #addStoryBtn{
   /*margin-left: 50px;*/
