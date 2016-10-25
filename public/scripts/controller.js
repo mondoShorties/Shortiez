@@ -5,6 +5,9 @@ myApp.config(['$routeProvider', function($routeProvider){
       .when('/login', {
           templateUrl: '/views/pages/login.html',
       })
+      .when('/loginAdmin', {
+          templateUrl: '/views/pages/loginAdmin.html',
+      })
       .when('/loginFail', {
           templateUrl: '/views/pages/loginFail.html',
       })
@@ -54,7 +57,7 @@ myApp.config(['$routeProvider', function($routeProvider){
           templateUrl: '/views/pages/userStats.html'
       })
       .otherwise({
-      redirectTo: '/adminLibrary'
+      redirectTo: '/login'
     }); // end $routeProvider
 
 }]); // end myApp

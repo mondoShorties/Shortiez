@@ -35,7 +35,7 @@
   margin-left: 5px;
 }
  .headerBtn{
-   color: white;
+   color: black;
    font-family: 'Comic Sans MS';
    font-size: 24px;
      background-color: #118cc3;
@@ -51,7 +51,7 @@
   color: white;
 }
  #loginB{
-   color: white;
+   color: black;
    padding-left: 20px;
    padding-right: 20px;
    margin-right: 5px;

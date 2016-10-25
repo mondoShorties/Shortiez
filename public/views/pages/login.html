@@ -6,18 +6,20 @@
 
     <form action="/login" method="post">
     <div>
-      <label for="username">Username</label>
-      <input class="inputLogin" type="text" name="username" ng-model="userNameInfo" id="username" placeholder="Login">
+      <label for="username" hidden="hidden">Username</label>
+      <input class="inputLogin" type="text" name="username" ng-model="userNameInfo" ng-init="userNameInfo='user'" id="username" hidden="hidden" >
+      <!-- <input class="inputLogin" type="text" name="username" id="username" value="user" hidden="hidden"> -->
     </div>
     <div>
-      <label for="password">Password</label>
-      <input type="password" name="password" id="password" placeholder="Password">
+      <label for="password" hidden="hidden">Password</label>
+      <input type="password" name="password" id="password" placeholder="Password" value="user" hidden="hidden">
     </div>
     <div>
       <br>
     <input class="btn btn-primary" type="submit" ng-click="setPrivileges()" name="name" value="Log In">
-      <p>Are you new? Click Sign Up!</p>
-      <button class="btn btn-primary"><a class="register" href="/#/register">Sign Up!</a></button>
+      <!-- <p>Are you new? Click Sign Up!</p> -->
+      <!-- <button class="btn btn-primary"><a class="register" href="/#/register" hidden="hidden">Sign Up!</a></button> -->
+
       </div>
     </form>
   </div> <!-- end loginBox -->
