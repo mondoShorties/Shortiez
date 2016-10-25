@@ -67,7 +67,12 @@
    height: 50px;
  }
 
-
+#inputLogin{
+  color: black;
+}
+#inputPassword{
+  color: black;
+}
 #userB{
   background-color: #BF3FBF;
   padding-left: 5px;
