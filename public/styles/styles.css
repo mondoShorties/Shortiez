@@ -34,6 +34,10 @@
   width: 150px;
   margin-left: 5px;
 }
+#loginHeader{
+  color: #2c2d2d;
+  background-color: #252526;
+}
  .headerBtn{
    color: black;
    font-family: 'Comic Sans MS';
@@ -116,9 +120,18 @@
    height: 300px;
    vertical-align: left;;
  }
-
-.changeBtn{
+#doneBtn{
+  background-color: #345aef;
+  border: none;
+}
+#cancelBtn{
+  background-color: #ead162;
+  border:none;
+}
+#changeBtn{
   /*display: table-cell;*/
+  background-color: #3FBFBF;
+  border: none;
 }
 #charactersListDiv{
   display: inline-block;
@@ -147,7 +160,7 @@
    color: black;
    /*overflow-y: scroll;*/
    position: fixed;
-   background-color: url(../views/images/watercolorside3.jpg);
+   /*background-color: url(../views/images/watercolorside3.jpg);*/
    background-size: 50px;
  }
  .charIcon, .storyTitle, .characters{
@@ -258,8 +271,9 @@
    /*float: right;*/
    position: relative;
    /*margin-left: 150px;*/
-   background-color: #118cc3 ;
-   color: white;
+   /*background-color: #118cc3 ;*/
+   background-color: white;
+   color: black;
 }
 .arialClass{
   font-family: 'Arial', sans-serif;
@@ -268,9 +282,9 @@
   float: right;
   font-family: 'Arial', sans-serif;
   font-size: 1em;
-  background-color: #118cc3 ;
+  background-color: white ;
   border: none;
-  color: white;
+  color: black;
   display: inline-block;
 }
 .arialButton:hover{
@@ -283,9 +297,9 @@
   float: right;
  font-family: 'Comic Sans MS';
  font-size: 1em;
- background-color: #118cc3;
+ background-color: white;
  border: none;
- color: white;
+ color: black;
  display: inline-block;
 
 }
@@ -299,9 +313,9 @@
   float: right;
   font-family: "OpenDyslexic";
   font-size: 1em;
-  background-color: #118cc3;
+  background-color: white;
   border: none;
-  color: white;
+  color: black;
   display: inline-block;
 }
 .openDyslexicButton:hover{
@@ -316,9 +330,9 @@
 .smallButton{
   float: right;
    font-size: 1.0em;
-   background-color: #118cc3;
+   background-color: white;
    border: none;
-   color: white;
+   color: black;
    display: inline-block;
 }
 .smallButton:hover{
@@ -332,9 +346,9 @@
 .mediumButton{
   float: right;
    font-size: 1em;
-   background-color: #118cc3;
+   background-color: white;
    border: none;
-   color: white;
+   color: black;
    display: inline-block;
  }
  .mediumButton:hover{
@@ -348,9 +362,9 @@
 .largeButton{
   float: right;
    font-size: 1em;
-   background-color: #118cc3;
+   background-color: white;
    border: none;
-   color: white;
+   color: black;
    display: inline-block;
    /*position: relative;*/
  }
@@ -428,6 +442,7 @@
 }*/
 /*--------------------------------    login        --------------------------------*/
 .loginCont {
+  color: white;
   position: fixed;
   text-align: center;
   top: 50%;
@@ -435,6 +450,7 @@
   transform: translate(-50%, -50%);
 }
 #loginBox{
+  color: white;
   border: solid;
   border-color: #e6e6e6;
   /*background-image: url(../views/images/watercolorsidemodal.jpg);*/
@@ -506,20 +522,23 @@
 /*---------------------------------   End Admin Story Input Pages   -------------------------------------*/
 /*--------------------------------     modals        --------------------------------*/
 .btn-primary{
-  background-color: #5f3cb0;
-  color: white;
+  /*background-color: #5f3cb0;*/
+  background-color: white;
+  color: black;
   text-decoration: none;
+  border-radius: 10px;
 }
-.btn-primary:hover:{
+.btn-primary:hover{
     background-color: #3FBFBF;
 }
 .modalAll{
-  background-image: url(../views/images/watercolorsidemodal.jpg);
+  /*background-image: url(../views/images/watercolorsidemodal.jpg);*/
   background-size: 100%;
   border-radius: 10px;
 }
 .titlePage{
   font-size: 50px;
+  color: white;
 }
 .register{
   color: white;
@@ -541,7 +560,7 @@
   margin-right: auto;
   margin-top: 50px;
   display: table;
-  background-image: url(../views/images/watercolorsidemodal.jpg);
+  /*background-image: url(../views/images/watercolorsidemodal.jpg);*/
   border-radius: 10px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.1) inset;
 }
@@ -553,7 +572,7 @@
   margin-left: 35px;
 }
 .logoutModal{
-  background-image: url(../views/images/watercolorsidemodal.jpg);
+  /*background-image: url(../views/images/watercolorsidemodal.jpg);*/
   border-radius: 10px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.1) inset;
 }
