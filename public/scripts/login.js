@@ -3,6 +3,7 @@ function($scope, $http, $uibModal, $rootScope, $location, userData){
 
   // loads stories from DB upon login
   userData.getAllStories();
+  $scope.usernamexy = "user";
 
   // setPrivileges returns from server user permissions that tells what the user can or can't see after logging in and
   // and stores the information locally until the user closes the browser.
