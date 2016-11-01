@@ -7,11 +7,12 @@
     <form action="/login" method="post">
     <div>
       <label for="username">Username</label>
-      <input class="inputLogin" type="text" name="username" ng-model="userNameInfo" id="username" placeholder="Login">
+      <!-- <input class="inputLogin" type="text" name="username" ng-model="userNameInfo" id="username" value="{{usernamexy}}"> -->
+      <input type="text" name="username" ng-model="userNameInfo" class="inputLogin" id="username" value="{{usernamexy}}">
     </div>
     <div>
       <label for="password">Password</label>
-      <input type="password" name="password" id="password" placeholder="Password">
+      <input type="password" name="password" id="password" placeholder="Password" value="user">
     </div>
     <div>
       <br>

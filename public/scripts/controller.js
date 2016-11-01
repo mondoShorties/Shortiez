@@ -53,6 +53,9 @@ myApp.config(['$routeProvider', function($routeProvider){
       .when('/userStats', {
           templateUrl: '/views/pages/userStats.html'
       })
+      .when('/checkOutTheseShoes', {
+          templateUrl: '/views/pages/userStats.html'
+      })
       .otherwise({
       redirectTo: '/login'
     }); // end $routeProvider

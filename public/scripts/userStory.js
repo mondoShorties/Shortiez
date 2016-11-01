@@ -34,6 +34,8 @@ $scope.myStoryLoad = function() {
   parsedText.empty();
   parsedText.append($scope.currentStory[$rootScope.pageIndex].page_text_btn.join(' '));
   window.scrollTo(0,0);
+  console.log('$scope.currentStory::', $scope.currentStory);
+  console.log('parsedText::', parsedText);
 }; // end myStoryLoad
 
 // opens popup for chooseName and redirects

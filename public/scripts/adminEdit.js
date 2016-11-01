@@ -132,8 +132,17 @@ $scope.captureStoryInput = function() {
     $scope.tempTextArray = $scope.pageTextBinder;
     $scope.tempTextArray = $scope.tempTextArray.replace(/\n/g, ''); // removes page breaks
     $scope.stringLength = $scope.tempTextArray.split(/[^\s]+/).length - 1; // counts total words based on spaces
-    $scope.tempTextArray = $scope.tempTextArray.split(' '); // splits remaining words into an array
+    console.log('inside captureStoryInput $scope.tempTextArray::', $scope.tempTextArray);
+    $scope.tempTextArray = $scope.tempTextArray.split(' '); // splits remaining words into an
+    //CHECK TO SEE IF tempTextArray[i] is in as a checked word, if so push into arry of checked words add html checked
+    console.log('in captureStoryInput after .split $scope.tempTextArray::', $scope.tempTextArray);
+    // var checkekboolean = true;
     for (var i = 0; i < $scope.stringLength; i++) { // for loop 1
+      // if (checkekboolean == false) {
+      //   checked = 'checked'; //        checked = 'checked';
+      // }else {
+      //   checked = '';
+      // }
       var taggedWord = '<input type="checkbox" onclick="setWordTrue('+ i +')" id="wordNum'+ i +'">' + $scope.tempTextArray[i] + ' ';
       $scope.tempTextArray.splice(i, 1, taggedWord);
     } // end for loop 1
@@ -141,6 +150,7 @@ $scope.captureStoryInput = function() {
   var textDiv = angular.element(document.querySelector('#adminStory'));
   textDiv.empty();
   var textArrayDisplay = $scope.tempTextArray.join('');
+  //PUSH THE WORDS TO BE DISPLAYED ONTO THE DOM
   textDiv.append(textArrayDisplay);
   $scope.displayBefore = false;
   $scope.displayAfter = true;
@@ -167,6 +177,7 @@ setWordTrue = function(num) {
 // true, is replaced with a button that will then be clickable. If found false, the button is stripped back down to a normal
 // word and new array of clickable and normal words is saved to either new or existing story.
 $scope.saveStory = function() {
+  console.log('$scope.checkedArray::', $scope.checkedArray);
   var arrayLength = $scope.tempTextArray.length;
   for (var i = 0; i < arrayLength; i++) { // for loop 1
     var num = i;
@@ -346,6 +357,7 @@ $scope.editPage = function(index) {
     size: 'lg',
     resolve: {
       index: function(){
+        console.log('im in uibModal editPage');
       return index;
       } // end index
     } // end resolve
@@ -413,6 +425,9 @@ $scope.updateCharacter = function(){
 // After ID is passed from the editPagePopup, allows for editing of pages from a given story
 $scope.updatePage = function() {
   var arrayLength = $scope.tempTextArray.length;
+  console.log('$scope.tempTextArray.length::', arrayLength);
+  console.log('$scope.tempTextArray::', $scope.tempTextArray);
+  console.log('$scope.checkedArray in $scope.updatePage ::', $scope.checkedArray);
   for (var i = 0; i < arrayLength; i++) { // for loop 1
     var num = i;
     for (var x = 0; x < $scope.checkedArray.length; x++) { // for loop 2
@@ -524,7 +539,7 @@ function ($scope, $uibModalInstance, $rootScope, $http, userData, index) {
 
 angular.module('myApp').controller('adminPagePopupController',
 function ($scope, $uibModalInstance, $rootScope, userData, index) {
-
+  console.log('Im in adminPagePopupController');
   // info passed from popups is then used below to determine if a story is new or existing for
   // purposes of editing arrays
   if ($scope.isNewOrEdit === 0) {
