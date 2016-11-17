@@ -84,9 +84,11 @@
   background-color: #3FBFBF;
 }
 #adminB {
-  background-color: #5EAF5E;
-  padding-left: 5px;
-  float: right;
+  background-color: #3FBFBF;
+  padding: 5px 20px;
+  position: absolute;
+  left: 50%;
+  border-radius: 25px;
 }
 #adminB:hover{
   background-color: #3FBFBF;
@@ -104,9 +106,10 @@
   /*position: absolute;*/
   float: right;
   margin-top: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: #3FBFBF;
+  padding: 5px 20px;
+  background-color: white;
+  border: 2px solid #3FBFBF;
+  border-radius: 25px;
 }
  .navbar-default{
    background-color: white;
@@ -138,27 +141,54 @@
   background-color: #3FBFBF;
   border: none;
 }
+#titleCharacters{
+  text-align: center;
+}
 #charactersListDiv{
   display: inline-block;
   margin-left: 20px;
+  border: 2px solid #d6d7d8;
+  border-radius: 25px;
+  padding: 20px;
+  width: auto;
 }
 #imgName{
-  /*display: table-row;*/
-  /*display: table-cell;*/
+float: left;
+position:relative;
+border: 2px solid #d6d7d8;
+padding: 10px;
+}
+.outerWrap{
+  display: inline;
 }
 #inputName{
-  /*display: table-cell;*/
+  text-align: center;
 }
+
 #nameChangeBox{
 }
 #originalName{
-  font-size: 28px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: auto;
 }
+
 #newName{
-  font-size: 28px;
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+
 }
 #changedName{
-  font-size: 28px;
+  text-align: center;
+  font-size: 20px;
+}
+#popupTraits{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 15px;
 }
  .sideNav {
    float: left;
@@ -454,17 +484,23 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#loginBox{
+#loginBtn{
+  font-size: 30px;
+  padding: 2px 52px;
+  border-radius: 25px;
   color: white;
+}
+#loginBox{
+  /*color: white;
   border: solid;
-  border-color: #e6e6e6;
+  border-color: #e6e6e6;*/
   /*background-image: url(../views/images/watercolorsidemodal.jpg);*/
-  border-radius: 10px;
+  /*border-radius: 10px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.1) inset;
   width: 300px;
   margin-right: auto;
   margin-left: auto;
-  display: table;
+  display: table;*/
 }
 /*Admin Library*/
 .gridListdemoBasicUsage md-grid-list {
@@ -528,13 +564,13 @@
 /*--------------------------------     modals        --------------------------------*/
 .btn-primary{
   /*background-color: #5f3cb0;*/
-  background-color: white;
+  background-color: #3FBFBF;
   color: black;
   text-decoration: none;
   border-radius: 10px;
 }
 .btn-primary:hover{
-    background-color: #3FBFBF;
+    background-color: #744CE8;
 }
 .modalAll{
   /*background-image: url(../views/images/watercolorsidemodal.jpg);*/

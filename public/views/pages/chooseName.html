@@ -1,18 +1,24 @@
 <div class="modalAll" ng-controller="userStoryController">
   <div class="modal-header">
-    <h3 class="modal-title"> Change Name </h3>
+    <h3 class="modal-title" id="titleCharacters"> Characters </h3>
   </div> <!-- end modal-header -->
 
   <div class="modal-body">
     <ul id="nameChangeBox">
       <li id="charactersListDiv" ng-repeat="(namesIndex, names) in characters">
         <div ng-hide="showTrue[$index]">
-          <img id="imgName"ng-src="{{readerIndex.story_characters[$index].character_photo}}" height='100px'/>
-          <p id="originalName">Original Name: {{names}}</p>
+          <img id="imgName"ng-src="{{readerIndex.story_characters[$index].character_photo}}" height='150px'/>
+<div class="outerWrap">
+          <p id="originalName">{{names}}</p>
           <!-- <br> -->
+        <p > <div id="popupTraits"> {{readerIndex.story_characters[$index].character_traits[0]}}</div>
+          <br><div id="popupTraits">{{readerIndex.story_characters[$index].character_traits[1]}}</div>
+        <br><div id="popupTraits">{{readerIndex.story_characters[$index].character_traits[2]}}</div>
+       </p>
           <p id="newName">
             New Name:
           </p>
+        </div>
           <input id="inputName"type="text" name="name" ng-model="name">
           <button id="changeBtn" class="btn btn-primary" ng-click="nameReplace(name, names, namesIndex)"> Change </button>
         </div>
