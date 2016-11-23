@@ -129,17 +129,30 @@
    vertical-align: left;;
  }
 #doneBtn{
-  background-color: #345aef;
-  border: none;
+  background-color: #3FBFBF;
+  border-color: #3FBFBF;
+  border-radius: 0px;
+  height: 40px;
+  width: 100px;
+  color: white;
 }
 #cancelBtn{
-  background-color: #ead162;
-  border:none;
+  background-color: white;
+  border-color: #3FBFBF;
+  border-radius: 0px;
+  height: 40px;
+  width: 100px;
+  color: black;
 }
 #changeBtn{
-  /*display: table-cell;*/
   background-color: #3FBFBF;
   border: none;
+  text-align: center;
+  color: white;
+
+}
+#changeBtnDiv{
+  text-align: center;
 }
 #titleCharacters{
   text-align: center;
@@ -150,7 +163,9 @@
   border: 2px solid #d6d7d8;
   border-radius: 25px;
   padding: 20px;
-  width: auto;
+  width: 350px;
+  height: 200px;
+  margin-top: 50px;
 }
 #imgName{
 float: left;
@@ -162,7 +177,9 @@ padding: 10px;
   display: inline;
 }
 #inputName{
-  text-align: center;
+display: inline-block;
+border: none;
+border-bottom: solid 2px #969696;
 }
 
 #nameChangeBox{
@@ -176,8 +193,9 @@ padding: 10px;
 }
 
 #newName{
-  text-align: center;
-  font-size: 20px;
+  padding-top: 10px;
+  display: inline-block;
+  font-size: 15px;
   text-transform: uppercase;
 
 }
@@ -202,6 +220,7 @@ padding: 10px;
    text-align: center;
    font-family: 'Comic Sans MS';
  }
+
  .storyTitle{
    font-size: 30px;
    color: black;
@@ -225,7 +244,7 @@ padding: 10px;
     margin-left: 75px;
   }
   .storyPage {
-    border-radius: 6px;
+    border-radius: 10px;
     font-size: 1.5em;
     letter-spacing: 2px;
     line-height: 225%;
@@ -235,7 +254,7 @@ padding: 10px;
      width: 71vw;
      border-width: thick;
      border-style: outset;
-     border-color: #0088dd;
+     border-color: #3FBFBF;
      padding: 30px 30px 30px 30px;
      margin: 5px 5px auto 0px;
      text-align: left;
@@ -452,7 +471,7 @@ padding: 10px;
   display: inline-block;
   margin: 2px 1px;
   cursor: pointer;
-  background-color: #35b3f4;
+  background-color: #3FBFBF;
   -webkit-transition-duration: 0.1s; /* Safari */
   transition-duration: 0.3s;
   animation-name: pulse_animation;

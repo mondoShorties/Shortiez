@@ -15,12 +15,17 @@
           <br><div id="popupTraits">{{readerIndex.story_characters[$index].character_traits[1]}}</div>
         <br><div id="popupTraits">{{readerIndex.story_characters[$index].character_traits[2]}}</div>
        </p>
+       </div>
+       <br>
           <p id="newName">
             New Name:
-          </p>
-        </div>
+
+
           <input id="inputName"type="text" name="name" ng-model="name">
+          </p>
+          <div id="changeBtnDiv">
           <button id="changeBtn" class="btn btn-primary" ng-click="nameReplace(name, names, namesIndex)"> Change </button>
+        </div>
         </div>
         <div ng-show="showTrue[$index]">
           <img ng-src="{{readerIndex.story_characters[$index].character_photo}}" height='100px'/>
@@ -32,7 +37,7 @@
   </div> <!-- end modal-body -->
 
   <div class="modal-footer">
-    <button id="doneBtn" class="btn-primary" ng-click="cancel()"> Done </button>
     <button id="cancelBtn" class="btn-primary" ng-click="cancel()"> Cancel </button>
+    <button id="doneBtn" class="btn-primary" ng-click="cancel()"> Done </button>
   </div> <!-- end modal-footer -->
 </div> <!-- end userStoryController -->
