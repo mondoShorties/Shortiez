@@ -2,7 +2,6 @@
   <div id="libraryMain">
   <div id="libraryInstructions">
   <!-- <h1> Welcome to your library, {{loggedInUser}}! </h1> -->
-  <h2> Click on a story cover to start reading. </h2>
   </div>
   <div id="addStoryBtn">
     <button type="button" class="btn btn-primary btn-lg" name="addStoryButton" ng-click="openAdminEdit()" ng-show="adminBtns" > Add a new story </button>
@@ -15,12 +14,12 @@
   <div class='md-padding' layout="row" layout-wrap >
     <md-card class="cards"style="width: 400px;" ng-repeat="story in stories">
       <md-card-content>
-
-      <h2> {{story.story_title}} </h2>
-      <p> {{story.story_description}} </p>
-      <div class="md-actions" layout="row" layout-align="end center">
-        <md-button ng-click="selectReaderStory($index)" ng-show="userBtns" aria-label="tempPlaceholder">
         <div class="storyCover"> <img ng-src="{{story.story_cover}}" class="md-card-image" alt="{{story.story_title}}'s picture" width='200px;'height = "200px;"></md-button></div>
+      <h2 id="storyTitleCard"> {{story.story_title}} </h2>
+      <p id="storyDiscriptionCard"> {{story.story_description}} </p>
+      <div class="md-actions" layout="row" layout-align="end center">
+        <md-button ng-click="selectReaderStory($index)" ng-show="userBtns" aria-label="tempPlaceholder" id="readBtn">read
+
       </div>
       <md-button ng-click="deleteStory($index)" ng-show="adminBtns" class="btn btn-danger"> Delete </md-button>
       <md-button ng-click="editStory($index)" ng-show="adminBtns" class="btn btn-primary" id="adminEditBtn"> Edit </md-button>

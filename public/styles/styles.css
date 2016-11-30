@@ -17,7 +17,7 @@
  	100% { transform: scale(1); }
  }
  body, html{
-   background-color: #252526;
+   background-color: black;
    /*background: url(../views/images/urbanwatercoloredit.jpg);*/
    /*background: url(../views/images/watercolorback.jpg);*/
    background-attachment: fixed;
@@ -89,6 +89,7 @@
   position: absolute;
   left: 50%;
   border-radius: 25px;
+  text-decoration: none;
 }
 #adminB:hover{
   background-color: #3FBFBF;
@@ -110,6 +111,10 @@
   background-color: white;
   border: 2px solid #3FBFBF;
   border-radius: 25px;
+}
+#logoutBtn:hover{
+  background-color: #3FBFBF;
+  color: white;
 }
  .navbar-default{
    background-color: white;
@@ -220,7 +225,35 @@ border-bottom: solid 2px #969696;
    text-align: center;
    font-family: 'Comic Sans MS';
  }
-
+#imgNameSide{
+  border: 2px solid #d6d7d8;
+  width: 150px;
+  height: 150px;
+}
+#characterTraits, #characterNameSide{
+  width   : auto;
+  height  : 40px;
+  position: relative;
+  z-index : 1;
+}
+#characterTraits:before {
+  content : "";
+  position: absolute;
+  left    : 25%;
+  bottom  : 0;
+  height  : 1px;
+  width   : 60%;  /* or 100px */
+  border-bottom:1px solid #d6d7d8;
+}
+#characterNameSide:before {
+  content : "";
+  position: absolute;
+  left    : 25%;
+  bottom  : 0;
+  height  : 1px;
+  width   : 60%;  /* or 100px */
+  border-bottom:1px solid #d6d7d8;
+}
  .storyTitle{
    font-size: 30px;
    color: black;
@@ -237,11 +270,18 @@ border-bottom: solid 2px #969696;
  }
  #sidebar-wrapper{
     position: relative;
-    margin: 5px;
+    margin: 40px;
     /*overflow-y: auto;*/
   }
-  .titlePage {
-    margin-left: 75px;
+  .titlePage{
+    font-size: 30px;
+   color: white;
+   text-align: left;
+   margin-left: -200px;
+   margin-top:-50px;
+  }
+  #userStory{
+
   }
   .storyPage {
     border-radius: 10px;
@@ -253,13 +293,11 @@ border-bottom: solid 2px #969696;
      height: 50vw;
      width: 71vw;
      border-width: thick;
-     border-style: outset;
-     border-color: #3FBFBF;
      padding: 30px 30px 30px 30px;
-     margin: 5px 5px auto 0px;
+     margin: 5px 5px auto 50px;
      text-align: left;
      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.1) inset;
-     background-color: #f7f3ee;
+     background-color: white;
      overflow: auto;
 }
 .TextWrap {
@@ -322,10 +360,9 @@ border-bottom: solid 2px #969696;
   background-color: #6600ff ;
 }
 .toggleButton{
-   /*float: right;*/
    position: relative;
-   /*margin-left: 150px;*/
-   /*background-color: #118cc3 ;*/
+   margin-left: 800px;
+   margin-top: -50px;
    background-color: white;
    color: black;
 }
@@ -342,7 +379,7 @@ border-bottom: solid 2px #969696;
   display: inline-block;
 }
 .arialButton:hover{
- background-color: #5f3cb0 ; /* purple */
+ background-color: #3FBFBF ;
 }
 .comicClass{
  font-family: 'Comic Sans MS';
@@ -358,7 +395,7 @@ border-bottom: solid 2px #969696;
 
 }
 .comicButton:hover{
-  /*background-color: #5f3cb0; /* purple*/
+  background-color: #3FBFBF;
 }
 .openDyslexicClass{
  font-family: "OpenDyslexic";
@@ -373,7 +410,7 @@ border-bottom: solid 2px #969696;
   display: inline-block;
 }
 .openDyslexicButton:hover{
-  background-color: #5f3cb0; /* purple */
+  background-color: #3FBFBF;
 }
 .smallClass{
  font-size: 1.0em;
@@ -390,7 +427,7 @@ border-bottom: solid 2px #969696;
    display: inline-block;
 }
 .smallButton:hover{
-  background-color: #5f3cb0; /* purple */
+  background-color: #3FBFBF;
 }
 .mediumClass{
    font-size: 1.75em;
@@ -406,7 +443,7 @@ border-bottom: solid 2px #969696;
    display: inline-block;
  }
  .mediumButton:hover{
-   background-color: #5f3cb0; /* purple */
+   background-color: #3FBFBF;
  }
 .largeClass{
    font-size: 2.0em;
@@ -423,10 +460,11 @@ border-bottom: solid 2px #969696;
    /*position: relative;*/
  }
 .largeButton:hover{
-  background-color: #5f3cb0; /* purple */
+  background-color: #3FBFBF;
 }
 #fontBox {
   width: 500px;
+  margin-left: 500px;
 }
  #fontBtns {
    /*float: right;*/
@@ -441,9 +479,25 @@ border-bottom: solid 2px #969696;
 .cards{
   border-radius: 10px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.1) inset;
+  margin-top: -100px;
 }
 .storyCover{
-  margin-right: : 40px;
+display: inline-block;
+}
+.md-card-image{
+  width: 150px;
+  height: 150px;
+}
+#readBtn{
+  background-color: #3FBFBF;
+  color: white;
+  border-radius: 50px;
+}
+#storyTitleCard{
+  display: inline-block;
+}
+#storyDiscriptionCard{
+  display: inline-block;
 }
 #libraryMain{
   padding: 10px;
@@ -461,6 +515,10 @@ border-bottom: solid 2px #969696;
   height: 100px;;
   width: 300px;
   margin-right: 100px;
+}
+
+.btn-danger{
+  border-radius: 50px;
 }
 /*--------------------------------customize word         --------------------------------*/
 
@@ -596,10 +654,7 @@ border-bottom: solid 2px #969696;
   background-size: 100%;
   border-radius: 10px;
 }
-.titlePage{
-  font-size: 50px;
-  color: white;
-}
+
 .register{
   color: white;
 }
@@ -644,8 +699,17 @@ border-bottom: solid 2px #969696;
 
 #adminEditBtn {
   float: right;
+  border-radius: 50px;
+  border: none;
 }
-
+#logoutBtnModal{
+  background-color: #3FBFBF;
+  border-color: #3FBFBF;
+  border-radius: 0px;
+  height: 40px;
+  width: 100px;
+  color: white;
+}
 @keyframes blinker {
   75% { opacity: 0.0; }
 }

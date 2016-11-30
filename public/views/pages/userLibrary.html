@@ -11,11 +11,11 @@
         <li>
           <div class="charIcon">
             <div ng-repeat="character in readerIndex.story_characters">
-              <img ng-src="{{character.character_photo}}" height='100px'/><br>
-              <h4>{{character.character_name}}</h4>
-              <p id="characterTraits"> Traits: {{character.character_traits[0]}}
-              <br>{{character.character_traits[1]}}
-            <br>{{character.character_traits[2]}} </p>
+              <img id="imgNameSide" ng-src="{{character.character_photo}}" height='100px'/><br>
+              <h4 id="characterNameSide">{{character.character_name}}</h4>
+            <p> <div id="characterTraits">{{character.character_traits[0]}}</div>
+              <div id="characterTraits">{{character.character_traits[1]}}</div>
+            <div >{{character.character_traits[2]}} </div><p>
             </div>
             </div>
           </li>
@@ -33,18 +33,18 @@
               <div class="{{sizeClass}}">
                 <div class="titlePage"
                     <h1>{{readerIndex.story_title}}</h1>
-
+                  </div>
                     <div class="navBtns">
                       <button class="btn toggleButton"type="button" name="button" ng-click="toggle()">Change Font</button>
                       <div id="fontBox" ng-show="commentText">
                         <div class="btn-group btn-group" class= "fontBtns">
-                            <button class="btn btn-primary" class= "btn arialButton" type= "button" name="arialButton" ng-click= "arialFont()">Font 1</button>
-                            <button class="btn btn-primary" class= "btn comicButton" type= "button" name="comicButton" ng-click= "comicFont()">Font 2</button>
-                            <button class="btn btn-primary" class= "btn openDyslexicButton" type= "button" name="openDyslexicButton" ng-click= "openDyslexicFont()">Font 3</button>
+                            <button class= "btn arialButton" type= "button" name="arialButton" ng-click= "arialFont()">Font 1</button>
+                            <button class= "btn comicButton" type= "button" name="comicButton" ng-click= "comicFont()">Font 2</button>
+                            <button class= "btn openDyslexicButton" type= "button" name="openDyslexicButton" ng-click= "openDyslexicFont()">Font 3</button>
 
-                            <button class="btn btn-primary" class= "btn smallButton" type= "button" name="smallButton" ng-click= "smallFont()">small</button>
-                            <button class="btn btn-primary" class= "btn mediumButton" type= "button" name="mediumButton" ng-click= "mediumFont()">medium</button>
-                            <button class="btn btn-primary" class= "btn largeButton" type= "button" name="largeButton" ng-click= "largeFont()">large</button>
+                            <button class= "btn smallButton" type= "button" name="smallButton" ng-click= "smallFont()">small</button>
+                            <button class= "btn mediumButton" type= "button" name="mediumButton" ng-click= "mediumFont()">medium</button>
+                            <button class= "btn largeButton" type= "button" name="largeButton" ng-click= "largeFont()">large</button>
 
                         </div>
                       </div>
