@@ -511,10 +511,11 @@ display: inline-block;
 }
 #addStoryBtn{
   /*margin-left: 50px;*/
-  /*float: right;*/
   height: 100px;;
   width: 300px;
   margin-right: 100px;
+  /*display: inline-block;*/
+  position: relative;
 }
 
 .btn-danger{
@@ -725,4 +726,18 @@ display: inline-block;
 #badWordTextPopupTwo {
   font-weight: bold;
   text-align: center;
+}
+#uploadButton {
+  font-family: 'blowbrush';
+  font: bold 15px Arial;
+  text-decoration: none;
+  background-color: #3FBFBF;
+  color: white;
+  padding: 15px 10px 15px 10px;
+  border-top: 1px solid #3FBFBF;
+  border-right: 1px solid #3FBFBF;
+  border-bottom: 1px solid #3FBFBF;
+  border-left: 1px solid #3FBFBF;
+  border-radius: 20px;
+  display: inline-block;
 }

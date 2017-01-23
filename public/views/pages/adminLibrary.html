@@ -1,5 +1,7 @@
 <div ng-controller="adminEditController" ng-init="getAllStories()" id="admin" class="gridListdemoBasicUsage">
   <div id="libraryMain">
+    <tab><a id="uploadButton" href="https://docs.google.com/a/shortiez.us/forms/d/e/1FAIpQLSe1vHCSgPGuTph5or4OHtlxTsQXmcG5VKDIZr9_ZmTfkerSXA/viewform" target="_blank">UPLOAD A STORY!</a></tab>
+
   <div id="libraryInstructions">
   <!-- <h1> Welcome to your library, {{loggedInUser}}! </h1> -->
   </div>
@@ -11,6 +13,7 @@
 <!-- <div id="addStoryBtn">
   <button type="button" class="btn btn-primary btn-lg" name="addStoryButton" ng-click="openAdminEdit()" ng-show="adminBtns" > Add a new story </button>
 </div> -->
+
   <div class='md-padding' layout="row" layout-wrap >
     <md-card class="cards"style="width: 400px;" ng-repeat="story in stories">
       <md-card-content>
@@ -27,7 +30,7 @@
       </md-card-content>
     </md-card>
     </div>
-  </div>
+
   <tab><a class="headerBtn" id="loginHeader" href="#loginAdmin" ng-show="userBtns">Admin Login </a></tab>
 
 </div>
