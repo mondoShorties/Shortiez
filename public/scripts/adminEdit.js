@@ -53,7 +53,10 @@ $scope.addStory = function() {
   var storyToAdd = {
     story_title: $scope.storyTitleBinder,
     story_cover: $scope.storyCoverBinder,
-    story_description: $scope.storyDescrpitionBinder
+    story_description: $scope.storyDescrpitionBinder,
+    story_authorF: $scope.storyAuthorBinderFirst,
+    story_authorL: $scope.storyAuthorBinderLast,
+    story_class: $scope.storyClassBinder
   }; // end objectToSend
   $http({
     method: 'POST',
@@ -67,6 +70,9 @@ $scope.addStory = function() {
   $scope.storyTitleBinder = '';
   $scope.storyCoverBinder = '';
   $scope.storyDescrpitionBinder = '';
+  $scope.storyAuthorBinderFirst = '';
+  $scope.storyAuthorBinderLast = '';
+  $scope.storyClassBinder = '';
   $scope.showAddStoryDiv = true;
   $scope.showCoverInfoBefore = false;
   $scope.showCoverInfoAfter = true;

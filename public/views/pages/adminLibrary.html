@@ -1,8 +1,9 @@
 <div ng-controller="adminEditController" ng-init="getAllStories()" id="admin" class="gridListdemoBasicUsage">
   <div id="libraryMain">
+    <tab><a id="uploadButton" href="https://docs.google.com/a/shortiez.us/forms/d/e/1FAIpQLSe1vHCSgPGuTph5or4OHtlxTsQXmcG5VKDIZr9_ZmTfkerSXA/viewform" target="_blank">UPLOAD A STORY!</a></tab>
+
   <div id="libraryInstructions">
   <!-- <h1> Welcome to your library, {{loggedInUser}}! </h1> -->
-  <h2> Click on a story cover to start reading. </h2>
   </div>
   <div id="addStoryBtn">
     <button type="button" class="btn btn-primary btn-lg" name="addStoryButton" ng-click="openAdminEdit()" ng-show="adminBtns" > Add a new story </button>
@@ -12,15 +13,18 @@
 <!-- <div id="addStoryBtn">
   <button type="button" class="btn btn-primary btn-lg" name="addStoryButton" ng-click="openAdminEdit()" ng-show="adminBtns" > Add a new story </button>
 </div> -->
+
   <div class='md-padding' layout="row" layout-wrap >
     <md-card class="cards"style="width: 400px;" ng-repeat="story in stories">
       <md-card-content>
-
-      <h2> {{story.story_title}} </h2>
-      <p> {{story.story_description}} </p>
+        <div class="storyCover"> <img ng-src="{{story.story_cover}}" class="md-card-image" alt="{{story.story_title}}'s picture"></md-button></div>
+      <h2 id="storyTitleCard"> {{story.story_title}} </h2>
+      <h4 id="storyAuthor"> Author: {{story.story_authorF}} {{story.story_authorL}}</h4>
+      <h4 id="storyAuthorClass"> Class: {{story.story_class}}</h4>
+      <!-- <p id="storyDiscriptionCard"> {{story.story_description}} </p> -->
       <div class="md-actions" layout="row" layout-align="end center">
-        <md-button ng-click="selectReaderStory($index)" ng-show="userBtns" aria-label="tempPlaceholder">
-        <div class="storyCover"> <img ng-src="{{story.story_cover}}" class="md-card-image" alt="{{story.story_title}}'s picture" width='200px;'height = "200px;"></md-button></div>
+        <md-button ng-click="selectReaderStory($index)" ng-show="userBtns" aria-label="tempPlaceholder" id="readBtn">read
+
       </div>
       <md-button ng-click="deleteStory($index)" ng-show="adminBtns" class="btn btn-danger"> Delete </md-button>
       <md-button ng-click="editStory($index)" ng-show="adminBtns" class="btn btn-primary" id="adminEditBtn"> Edit </md-button>
@@ -28,7 +32,7 @@
       </md-card-content>
     </md-card>
     </div>
-  </div>
+
   <tab><a class="headerBtn" id="loginHeader" href="#loginAdmin" ng-show="userBtns">Admin Login </a></tab>
 
 </div>

@@ -5,6 +5,9 @@
     <h3> Title: {{storyIndex.story_title}} </h3>
     <h4> Description: {{storyIndex.story_description}} </h4>
     <h4> Cover Photo URL: {{storyIndex.story_cover}} </h4>
+    <h5> Author First Name: {{storyAuthorBinderFirst}}</h5>
+    <h5> Author Last Name: {{storyAuthorBinderLast}}</h5>
+    <h5> Author's Class: {{storyClassBinder}}</h5>
     <img ng-src="{{storyIndex.story_cover}}" alt="{{storyIndex.story_title}}'s cover" width='100px;' height = "100px;">
     </div><br>
     <button ng-click="editStoryCover()" class="btn btn-primary"> Edit Story Info </button>
