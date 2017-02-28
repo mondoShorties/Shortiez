@@ -17,9 +17,11 @@
   <div class='md-padding' layout="row" layout-wrap >
     <md-card class="cards"style="width: 400px;" ng-repeat="story in stories">
       <md-card-content>
-        <div class="storyCover"> <img ng-src="{{story.story_cover}}" class="md-card-image" alt="{{story.story_title}}'s picture" width='200px;'height = "200px;"></md-button></div>
+        <div class="storyCover"> <img ng-src="{{story.story_cover}}" class="md-card-image" alt="{{story.story_title}}'s picture"></md-button></div>
       <h2 id="storyTitleCard"> {{story.story_title}} </h2>
-      <p id="storyDiscriptionCard"> {{story.story_description}} </p>
+      <h4 id="storyAuthor"> Author: {{story.story_authorF}} {{story.story_authorL}}</h4>
+      <h4 id="storyAuthorClass"> Class: {{story.story_class}}</h4>
+      <!-- <p id="storyDiscriptionCard"> {{story.story_description}} </p> -->
       <div class="md-actions" layout="row" layout-align="end center">
         <md-button ng-click="selectReaderStory($index)" ng-show="userBtns" aria-label="tempPlaceholder" id="readBtn">read
 

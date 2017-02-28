@@ -477,7 +477,7 @@ border-bottom: solid 2px #969696;
 /*---------------------      end readerStory        --------------------------------*/
 /*------------------------------    library    --------------------------------------*/
 .cards{
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.1) inset;
   margin-top: -100px;
 }
@@ -485,16 +485,20 @@ border-bottom: solid 2px #969696;
 display: inline-block;
 }
 .md-card-image{
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 200px;
+  /*margin: -15px 0px -45px -15px;*/
 }
 #readBtn{
   background-color: #3FBFBF;
   color: white;
-  border-radius: 50px;
+  /*border-radius: 50px;*/
+  width: 55%;
+  margin: -10px;
 }
 #storyTitleCard{
   display: inline-block;
+  margin-left: 10px;
 }
 #storyDiscriptionCard{
   display: inline-block;

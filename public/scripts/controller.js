@@ -69,9 +69,12 @@ myApp.config(['$routeProvider', function($routeProvider){
 
 myApp.factory('userData', ['$http', '$rootScope', '$location', function($http, $rootScope, $location) {
 
-  $rootScope.userAdminCheck = sessionStorage.getItem('userPermissionAdmin');
-  $rootScope.userAuthCheck = sessionStorage.getItem('userAuthPermission');
-  $rootScope.loggedInUser = sessionStorage.getItem('loggedInUser');
+  // $rootScope.userAdminCheck = sessionStorage.getItem('userPermissionAdmin');
+  $rootScope.userAdminCheck = sessionStorage='false';
+  // $rootScope.userAuthCheck = sessionStorage.getItem('userAuthPermission');
+  $rootScope.userAuthCheck = sessionStorage='true';
+  // $rootScope.loggedInUser = sessionStorage.getItem('loggedInUser');
+  $rootScope.loggedInUser = sessionStorage='user';
   $rootScope.stories = []; // array that holds all stories from database
   $rootScope.tempNewStoryArray = []; // temporary array holding only newly added story
   $rootScope.tempIndex = 0; // temporarily holds object index ID, very important!

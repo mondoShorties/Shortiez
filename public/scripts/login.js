@@ -17,9 +17,13 @@ function($scope, $http, $uibModal, $rootScope, $location, userData){
       data: getUserInfo
     }).then(function(response){
       if (typeof(Storage) !== undefined) {
-        sessionStorage.setItem('userPermissionAdmin', response.data.admin);
-        sessionStorage.setItem('userAuthPermission', response.data.auth);
-        sessionStorage.setItem('loggedInUser', response.data.username);
+        console.log("user info" + getUserInfo);
+        // sessionStorage.setItem('userPermissionAdmin', response.data.admin);
+        sessionStorage.setItem('false');
+        // sessionStorage.setItem('userAuthPermission', response.data.auth);
+        sessionStorage.setItem('true');
+        // sessionStorage.setItem('loggedInUser', response.data.username);//
+        sessionStorage.setItem('user');//
       } // end if
     }); // end $http
   }; // end setPrivileges

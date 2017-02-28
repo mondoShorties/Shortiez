@@ -9,10 +9,19 @@
       <input type="text" name="storyDescription" ng-model="storyDescrpitionBinder" placeholder="Description"><br>
       <label for="storyCoverImg"> Cover URL</label>
       <input type="text" name="storyCoverImg" ng-model="storyCoverBinder" placeholder="URL">
+      <label for="storyAuthorBinderFirst"> Author First Name </label>
+      <input type="text" name="storyAuthorBinderFirst" ng-model="storyAuthorBinderFirst" placeholder="First Name"><br>
+      <label for="storyAuthorBinderLast"> Author Last Name </label>
+      <input type="text" name="storyAuthorBinderLast" ng-model="storyAuthorBinderLast" placeholder="Last Name"><br>
+      <label for="storyClassBinder"> Author's Class </label>
+      <input type="text" name="storyClassBinder" ng-model="storyClassBinder" placeholder="AuthorClass"><br>
 
       <div id="storyPreview">
         <h4> Title: {{storyTitleBinder}}</h4>
         <h5> Description: {{storyDescrpitionBinder}} </h5>
+        <h5> Author First Name: {{storyAuthorBinderFirst}}</h5>
+        <h5> Author Last Name: {{storyAuthorBinderLast}}</h5>
+        <h5> Author: {{storyClassBinder}}</h5>
         <img ng-src="{{storyCoverBinder}}" height="50px"/>
       </div>
       <button ng-click="addStory()" class="btn btn-primary"> Add New Story </button>

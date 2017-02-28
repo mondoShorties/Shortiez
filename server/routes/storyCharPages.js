@@ -10,7 +10,10 @@ router.post('/addStory', function(req, res){
   var storyToAdd = {
     story_title: req.body.story_title,
     story_description: req.body.story_description,
-    story_cover: req.body.story_cover
+    story_cover: req.body.story_cover,
+    story_authorF: req.body.story_authorF,
+    story_authorL: req.body.story_authorL,
+    story_class: req.body.story_class
   };
   var newStory = addStory(storyToAdd);
   newStory.save(function(err, story){
