@@ -1,7 +1,13 @@
 myApp.controller('adminEditController',
 ['$scope', '$http', '$uibModal', '$rootScope', '$location', '$sce', 'userData',
 function($scope, $http, $uibModal, $rootScope, $location, $sce, userData){
-
+/*
+  $rootScope.userAdminCheck = sessionStorage='true';
+  // $rootScope.userAuthCheck = sessionStorage.getItem('userAuthPermission');
+  $rootScope.userAuthCheck = sessionStorage='true';
+  // $rootScope.loggedInUser = sessionStorage.getItem('loggedInUser');
+  $rootScope.loggedInUser = sessionStorage='admin';
+*/
 // both of the following function calls set button views and permissions upon login
 userData.checkAuth();
 userData.setBtnsView();

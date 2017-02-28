@@ -3,25 +3,25 @@ var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap', 'ngMaterial', 'x
 myApp.config(['$routeProvider', function($routeProvider){
   $routeProvider
       .when('/login', {
-          templateUrl: '/views/pages/login.html',
+          templateUrl: '/views/pages/login.html'
       })
       .when('/loginAdmin', {
-          templateUrl: '/views/pages/loginAdmin.html',
+          templateUrl: '/views/pages/loginAdmin.html'
       })
       .when('/loginFail', {
-          templateUrl: '/views/pages/loginFail.html',
+          templateUrl: '/views/pages/loginFail.html'
       })
       .when('/register', {
-          templateUrl: '/views/pages/register.html',
+          templateUrl: '/views/pages/register.html'
       })
       .when('/registerFail', {
-          templateUrl: '/views/pages/registerFail.html',
+          templateUrl: '/views/pages/registerFail.html'
       })
       .when('/userLibrary', {
-          templateUrl: '/views/pages/userLibrary.html',
+          templateUrl: '/views/pages/userLibrary.html'
       })
       .when('/adminEdit', {
-          templateUrl: '/views/pages/adminEdit.html',
+          templateUrl: '/views/pages/adminEdit.html'
       })
       .when('/adminLibrary', {
           templateUrl: '/views/pages/adminLibrary.html'
@@ -67,7 +67,17 @@ myApp.config(['$routeProvider', function($routeProvider){
 
 //-----------------------------------------  userData factory-----------------------------------------
 
-myApp.factory('userData', ['$http', '$rootScope', '$location', function($http, $rootScope, $location) {
+myApp.factory('userData', ['$http', '$rootScope', '$location', '$route', function($http, $rootScope, $location, $route) {
+
+  var setLoginToAdmin =  function (){
+    $rootScope.userAdminCheck = sessionStorage='true';
+    // $rootScope.userAuthCheck = sessionStorage.getItem('userAuthPermission');
+    $rootScope.userAuthCheck = sessionStorage='true';
+    // $rootScope.loggedInUser = sessionStorage.getItem('loggedInUser');
+    $rootScope.loggedInUser = sessionStorage='admin';
+    $route.reload();
+    console.log('just finished setting admin credentials in factory::');
+  }
 
   // $rootScope.userAdminCheck = sessionStorage.getItem('userPermissionAdmin');
   $rootScope.userAdminCheck = sessionStorage='false';
@@ -160,12 +170,13 @@ myApp.factory('userData', ['$http', '$rootScope', '$location', function($http, $
   }; // end setBtnsView
 
   return {
-    checkAuth: checkAuth,
-    randomId: randomId,
-    randomNum: randomNum,
-    getAllStories: getAllStories,
-    getBadWords: getBadWords,
-    setBtnsView: setBtnsView
+    checkAuth : checkAuth,
+    randomId : randomId,
+    randomNum : randomNum,
+    getAllStories : getAllStories,
+    getBadWords : getBadWords,
+    setBtnsView : setBtnsView,
+    setLoginToAdmin : setLoginToAdmin
   }; // end return
 
 }]);

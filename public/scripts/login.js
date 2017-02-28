@@ -28,6 +28,38 @@ function($scope, $http, $uibModal, $rootScope, $location, userData){
     }); // end $http
   }; // end setPrivileges
 
+  $scope.setPrivilegesAdmin = function(){
+    var getUserInfo = {
+      username: $scope.userNameInfo
+    }; // end getUserInfo
+    userData.setLoginToAdmin();
+    /*
+    $http({
+      method: 'POST',
+      url: '/getUserCheck',
+      data: getUserInfo
+    }).then(function(response){
+      if (typeof(Storage) !== undefined) {
+        console.log("user info" + getUserInfo);
+        $rootScope.userAdminCheck = sessionStorage='true';
+        // $rootScope.userAuthCheck = sessionStorage.getItem('userAuthPermission');
+        $rootScope.userAuthCheck = sessionStorage='true';
+        // $rootScope.loggedInUser = sessionStorage.getItem('loggedInUser');
+        $rootScope.loggedInUser = sessionStorage='admin';
+        console.log('just finished setting admin credentials::');
+
+        // sessionStorage.setItem('userPermissionAdmin', response.data.admin);
+        sessionStorage.setItem('false');
+        // sessionStorage.setItem('userAuthPermission', response.data.auth);
+        sessionStorage.setItem('true');
+        // sessionStorage.setItem('loggedInUser', response.data.username);//
+        sessionStorage.setItem('user');//
+
+      } // end if
+    }); // end $http
+    */
+  }; // end setPrivileges
+
   // opens a modal popup then redirects user to logout option
   $scope.openLogout = function(){
     $uibModal.open({
