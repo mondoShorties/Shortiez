@@ -78,6 +78,7 @@ myApp.factory('userData', ['$http', '$rootScope', '$location', '$route', functio
     $rootScope.userAuthCheck = sessionStorage='true';
     // $rootScope.loggedInUser = sessionStorage.getItem('loggedInUser');
     $rootScope.loggedInUser = sessionStorage='admin';
+    $location.path('/adminLibrary');
     $route.reload();
     console.log('just finished setting admin credentials in factory::');
   };
