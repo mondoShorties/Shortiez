@@ -303,7 +303,7 @@ border-bottom: solid 2px #969696;
     line-height: 225%;
     width: 90%;
     position: relative;
-     height: 50vw;
+     height: 75vw;
      width: 71vw;
      border-width: thick;
      padding: 30px 30px 30px 30px;
@@ -374,7 +374,7 @@ border-bottom: solid 2px #969696;
 }
 .toggleButton{
    position: relative;
-   margin-left: 800px;
+   margin-left: 700px;
    margin-top: -50px;
    background-color: white;
    color: black;
