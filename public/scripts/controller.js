@@ -59,6 +59,9 @@ myApp.config(['$routeProvider', function($routeProvider){
       .when('/checkOutTheseShoes', {
           templateUrl: '/views/pages/userStats.html'
       })
+      .when('/uploadStory', {
+          templateUrl: '/views/pages/uploadStory.html'
+      })
       .otherwise({
       redirectTo: '/login'
     }); // end $routeProvider
@@ -77,7 +80,7 @@ myApp.factory('userData', ['$http', '$rootScope', '$location', '$route', functio
     $rootScope.loggedInUser = sessionStorage='admin';
     $route.reload();
     console.log('just finished setting admin credentials in factory::');
-  }
+  };
 
   // $rootScope.userAdminCheck = sessionStorage.getItem('userPermissionAdmin');
   $rootScope.userAdminCheck = sessionStorage='false';
@@ -105,15 +108,6 @@ myApp.factory('userData', ['$http', '$rootScope', '$location', '$route', functio
   $rootScope.userBtns = false; // comment out to turn off authorizations
   $rootScope.adminBtns = false; // comment out to turn off authorizations
 
-
-
-  // var adminCheck = function() {
-  //   var admin = $rootScope.userAdminCheck;
-  //   if (admin === false || admin === 'false' || admin === undefined || admin === null || admin === '') {
-  //     var path = "#login";
-  //     window.location.href = path;
-  //   } // end if
-  // }; // end adminCheck
 
   // determines user's permisson and makes sure other variables are accounted for
   var checkAuth = function() {

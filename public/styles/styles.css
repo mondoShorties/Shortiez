@@ -94,6 +94,17 @@
 #adminB:hover{
   background-color: #3FBFBF;
 }
+#uploadB{
+  background-color: #3FBFBF;
+  padding: 5px 20px;
+  position: absolute;
+  left: 25%;
+  border-radius: 25px;
+  text-decoration: none;
+}
+#uploadB:hover{
+  background-color: #3FBFBF;
+}
 #manageB{
   background-color: #BF3FBF;
   padding-left: 5px;
@@ -116,6 +127,7 @@
   background-color: #3FBFBF;
   color: white;
 }
+
  .navbar-default{
    background-color: white;
     /*background-color: #118cc3;--blue*/
@@ -267,6 +279,7 @@ border-bottom: solid 2px #969696;
    position: sticky;
    margin: 70px 0px 0px 175px;
    padding: 0px 0px 0px 175px;
+   display: flex;
  }
  #sidebar-wrapper{
     position: relative;
@@ -744,4 +757,48 @@ display: inline-block;
   border-left: 1px solid #3FBFBF;
   border-radius: 20px;
   display: inline-block;
+}
+#uploadButton:hover{
+  background-color: #744CE8;
+}
+#emailButton{
+  font-family: 'blowbrush';
+  font: bold 15px Arial;
+  text-decoration: none;
+  background-color: #3FBFBF;
+  color: white;
+  padding: 15px 10px 15px 10px;
+  border-top: 1px solid #3FBFBF;
+  border-right: 1px solid #3FBFBF;
+  border-bottom: 1px solid #3FBFBF;
+  border-left: 1px solid #3FBFBF;
+  border-radius: 20px;
+  display: inline-block;
+}
+#emailButton:hover{
+background-color: #744CE8;
+}
+.uploadInstructions {
+  border-radius: 10px;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  line-height: 225%;
+  width: 90%;
+  position: relative;
+   height: 35vw;
+   width: 71vw;
+   border-width: thick;
+   padding: 50px 30px 30px 30px;
+   margin: 5px 5px auto 50px;
+   text-align: left;
+   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.1) inset;
+   background-color: white;
+   overflow: auto;
+}
+#uploadTitle{
+
+}
+#UploadText{
+  padding-top: 30px;
+  padding-bottom: 50px;
 }
