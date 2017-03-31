@@ -62,6 +62,9 @@ myApp.config(['$routeProvider', function($routeProvider){
       .when('/uploadStory', {
           templateUrl: '/views/pages/uploadStory.html'
       })
+      .when('/mondoLogin', {
+          templateUrl: '/views/pages/mondoLogin.html'
+      })
       .otherwise({
       redirectTo: '/login'
     }); // end $routeProvider
@@ -78,6 +81,7 @@ myApp.factory('userData', ['$http', '$rootScope', '$location', '$route', functio
     $rootScope.userAuthCheck = sessionStorage='true';
     // $rootScope.loggedInUser = sessionStorage.getItem('loggedInUser');
     $rootScope.loggedInUser = sessionStorage='admin';
+    
     $route.reload();
     console.log('just finished setting admin credentials in factory::');
   };
