@@ -87,7 +87,7 @@
   background-color: #3FBFBF;
   padding: 5px 20px;
   position: absolute;
-  left: 50%;
+  left: 35%;
   border-radius: 25px;
   text-decoration: none;
 }
@@ -97,8 +97,8 @@
 #uploadB{
   background-color: #3FBFBF;
   padding: 5px 20px;
-  position: absolute;
-  left: 25%;
+  position: absolute;;
+  left: 60%;
   border-radius: 25px;
   text-decoration: none;
 }
@@ -492,7 +492,8 @@ border-bottom: solid 2px #969696;
 .cards{
   /*border-radius: 10px;*/
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.1) inset;
-  margin-top: -100px;
+  margin-top: 50px;
+  display: flex;
 }
 .storyCover{
 display: inline-block;
