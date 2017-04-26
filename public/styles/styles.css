@@ -497,6 +497,10 @@ border-bottom: solid 2px #969696;
 }
 .storyCover{
 display: inline-block;
+position: flex;
+margin-left: -15px;
+margin-bottom: -55px;
+margin-top: -15px;
 }
 .md-card-image{
   width: 180px;
@@ -509,13 +513,33 @@ display: inline-block;
   /*border-radius: 50px;*/
   width: 55%;
   margin: -10px;
+  padding-bottom: -20px;
+
+}
+#cardInfo{
+  display: inline-block;
+  float: right;
+  position: relative;
 }
 #storyTitleCard{
   display: inline-block;
   margin-left: 10px;
+  float: right;
+  padding-bottom: -50px;
+  margin-top: -1px;
 }
-#storyDiscriptionCard{
+#storyAuthor{
   display: inline-block;
+  float: right;
+  margin-top: -140px;
+  margin-left: 20px;
+}
+#storyAuthorClass{
+  display: inline-block;
+  float: right;
+  margin-left: 10px;
+  margin-top: -100px;
+
 }
 #libraryMain{
   padding: 10px;
@@ -802,4 +826,8 @@ background-color: #744CE8;
 #UploadText{
   padding-top: 30px;
   padding-bottom: 50px;
+}
+.imgBack{
+  width: auto;
+  height: auto;
 }
