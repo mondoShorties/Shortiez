@@ -15,6 +15,7 @@ var appGenericMain = require('./routes/appGenericMain');
 var createStory = require('./routes/storyCharPages');
 var getLibrary = require('./routes/libraryAdminRoute');
 var userStory = require('./routes/userStory');
+var rateStory = require('./routes/rateStory');
 
 app.listen(process.env.PORT || 9002, function(){ console.log("Running on local port 9002..."); });
 
@@ -36,7 +37,8 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use('/', login, logout, register, appGenericMain, createStory, getLibrary, userStory);
+app.use('/', login, logout, register, appGenericMain, createStory, getLibrary, userStory, rateStory);
+app.use('/rateStory', rateStory);
 
 app.get('/', function(req,res){
   console.log('URL hit');

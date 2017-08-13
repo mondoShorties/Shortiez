@@ -9,7 +9,8 @@ var addStorySchema = new Schema({
   story_authorL: String,
   story_class: String,
   story_characters: [],
-  story_pages: [{}]
+  story_pages: [{}],
+  story_ratings: {},
 });
 
 var AddStory = mongoose.model( 'AddStory', addStorySchema );  // sets schema to model var

@@ -1,6 +1,6 @@
 myApp.controller('adminEditController',
-['$scope', '$http', '$uibModal', '$rootScope', '$location', '$sce', 'userData',
-function($scope, $http, $uibModal, $rootScope, $location, $sce, userData){
+['$scope', '$http', '$uibModal', '$rootScope', '$location', '$sce', '$mdDialog', 'userData',
+function($scope, $http, $uibModal, $rootScope, $location, $sce, $mdDialog, userData){
 /*
   $rootScope.userAdminCheck = sessionStorage='true';
   // $rootScope.userAuthCheck = sessionStorage.getItem('userAuthPermission');
@@ -32,6 +32,44 @@ $scope.selectReaderStory = function(index) {
   var path = "#userLibrary";
   window.location.href = path;
 }; // end selectReaderStory
+
+$scope.readStorySummary = function(index) {
+  console.log('selected story to get a summmerarrydeiu jfor::');
+  // $rootScope.characters = [];
+  // $rootScope.readerIndex = $rootScope.stories[index];
+  // for (var i = 0; i < $rootScope.readerIndex.story_characters.length; i++) {
+  //   $rootScope.characters.push($rootScope.readerIndex.story_characters[i].character_name);
+  // } // end for loop
+  // var path = "#userLibrary";
+  // window.location.href = path;
+}; // end selectReaderStory
+
+$scope.showAlert = function(ev, story) {
+  console.log('story::', story);
+  // Appending dialog to document.body to cover sidenav in docs app
+  // Modal dialogs should fully cover application
+  // to prevent interaction outside of dialog
+  if (story.story_description == null) {
+    story.story_description = '';
+  }
+  $mdDialog.show(
+    $mdDialog.alert()
+      .parent(angular.element(document.querySelector('#popupContainer')))
+      .clickOutsideToClose(true)
+      .title(''+story.story_title)
+      // .htmlContent("<h1>html</h1><h4>works</h4>")
+      .htmlContent(
+        `<div> ${story.story_description} <br>
+        Love  ${story.story_ratings.love} <br>
+        Like  ${story.story_ratings.like} <br>
+        Dislike  ${story.story_ratings.dislike}
+        </div>`
+      )
+      .ariaLabel('Story Summay')
+      .ok('nice')
+      .targetEvent(ev)
+  );
+};
 
 // opens the add new story view and sets whether or not a story
 // is new or old(edit) for how arrays are to be used

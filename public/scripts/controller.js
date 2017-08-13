@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap', 'ngMaterial', 'xeditable']);
+var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap', 'ngMaterial', 'xeditable', 'ngSanitize']);
 
 myApp.config(['$routeProvider', function($routeProvider){
   $routeProvider
@@ -176,5 +176,31 @@ myApp.factory('userData', ['$http', '$rootScope', '$location', '$route', functio
     setBtnsView : setBtnsView,
     setLoginToAdmin : setLoginToAdmin
   }; // end return
+
+}]);
+
+
+
+myApp.factory('RatingFactory', ['$http', '$rootScope', '$location', '$route', function($http, $rootScope, $location, $route) {
+
+  console.log(`ratingFactory initialized::`);
+  var rateStory = function(rating) {
+    console.log(`inside ratingFactory::`, rating);
+    // $http.post('/rateStory/rate', rating ).then(function(response) {
+    //     console.log('response from /rateStory/rate::', response);
+    //     // $rootScope.badWordsArray = response.data;
+    // }); // end http GET
+
+    $http.post("/rateStory/rate", rating).then(function(response){
+              contractorAccountObject.response = response.data;
+              console.log('RETRUN OF POST RATING FUNCTION !!! !!!!!  ::  ', response);
+          });
+
+
+  }; //
+
+  return {
+    rateStory: rateStory
+  };
 
 }]);

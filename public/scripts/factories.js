@@ -149,6 +149,7 @@ myApp.factory('userDataFactory', ['$http', '$rootScope', '$location', '$cookies'
     } // end else
   }; // end setBtnsView
 
+
   return {
     checkAuth: checkAuth,
     randomId: randomId,
@@ -157,6 +158,6 @@ myApp.factory('userDataFactory', ['$http', '$rootScope', '$location', '$cookies'
     getBadWords: getBadWords,
     setBtnsView: setBtnsView,
     setPrivileges: setPrivileges
-  }; // end return
+    }; // end return
 
 }]);
