@@ -17,14 +17,14 @@
  	100% { transform: scale(1); }
  }
  body, html{
-   background-color: black;
+   background-color: white;
    /*background: url(../views/images/urbanwatercoloredit.jpg);*/
    /*background: url(../views/images/watercolorback.jpg);*/
    background-attachment: fixed;
    background-size: cover;
    height: 100%;
    font-size: 1em;
-   font-family: Comic Sans MS;
+   font-family: 'PT Sans Narrow', sans-serif;
  }
 
 
@@ -40,7 +40,7 @@
 }
  .headerBtn{
    color: black;
-   font-family: 'Comic Sans MS';
+   font-family: 'PT Sans Narrow', sans-serif;
    font-size: 24px;
      background-color: #118cc3;
    /*height: 30px;*/
@@ -54,8 +54,69 @@
   text-decoration: none;
   color: white;
 }
+/*get this centered and big enough for the contained div*/
+.loginForm{
+  position: fixed;
+  right: 0;
+  left: 0;
+  height: auto;
+  width: 450px;
+  margin-left: -120px;
+  margin-right:auto;
+  padding-left: -10px;
+}
+.loginInput{
+  height: 200px;
+  width: auto;
+}
+#loginText{
+  float: left;
+  display: inline-block;
+  font-size: 75px;
+  margin-left: 75px;
+}
+#loginBox{
+float: right;
+color: #3FBFBF;
+display: inline-block;
+width: 250px;
+height: 100px;
+font-size: 75px;
+margin-top: 10px;
+}
+/*Change Placeholder Color*/
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #D3D3D3;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #D3D3D3;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #D3D3D3;
+}
+#loginDesc{
+  color: gray;
+}
+#loginBtnDiv{
+  position: fixed;
+  right: 0;
+  left: 0;
+  height: auto;
+  width: 450px;
+  margin-top: -50px;
+  margin-left: -100px;
+}
+#loginBtn{
+  font-size: 30px;
+  padding: 2px 52px;
+  border-radius: 25px;
+  border-color: #3FBFBF;
+  color: #3FBFBF;
+}
  #loginB{
-   color: black;
+   color: #3FBFBF;
+   background-color: white;
    padding-left: 20px;
    padding-right: 20px;
    margin-right: 5px;
@@ -137,6 +198,7 @@
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     width: 100%;
+    font-family: 'PT Sans Narrow', sans-serif;
   }
 
 /*--------------------------------      readerStory         --------------------------------*/
@@ -500,7 +562,7 @@ border-bottom: solid 2px #969696;
 display: inline-block;
 position: flex;
 margin-left: -15px;
-margin-bottom: -55px;
+margin-bottom: -60px;
 margin-top: -15px;
 }
 .md-card-image{
@@ -508,14 +570,20 @@ margin-top: -15px;
   height: 200px;
   /*margin: -15px 0px -45px -15px;*/
 }
+
+#summaryBtn{
+  background-color: #D378CC;
+  width: 60%;
+  margin: -40px -20px 5px -10px;
+  border-radius: 0;
+}
 #readBtn{
-  background-color: #3FBFBF;
+  background-color: #6057CE;
   color: white;
   /*border-radius: 50px;*/
-  width: 55%;
-  margin: -10px;
-  padding-bottom: -20px;
-
+  width: 60%;
+  margin: -10px -20px -15px -10px;
+  border-radius: 0;
 }
 #cardInfo{
   display: inline-block;
@@ -524,16 +592,18 @@ margin-top: -15px;
 }
 #storyTitleCard{
   display: inline-block;
+  position: fixed;
+  width: 200px;
   margin-left: 10px;
+  margin-top: -5px;
   float: right;
-  padding-bottom: -50px;
-  margin-top: 20px;
+  font-size: 25px;
 }
 #storyAuthor{
   display: inline-block;
   float: right;
-  margin-top: -140px;
-  margin-left: 20px;
+  margin-left: 10px;
+  margin-top: 80px;
 }
 #storyAuthorClass{
   display: inline-block;
@@ -546,7 +616,7 @@ margin-top: -15px;
   padding: 10px;
   margin: 40px;
   /*background-color: rgba(250, 250, 250, 0.9);*/
-  background-color: black;
+  background-color: white;
 }
 #libraryInstructions{
   padding: 20px;
@@ -604,24 +674,6 @@ margin-top: -15px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-#loginBtn{
-  font-size: 30px;
-  padding: 2px 52px;
-  border-radius: 25px;
-  color: white;
-}
-#loginBox{
-  /*color: white;
-  border: solid;
-  border-color: #e6e6e6;*/
-  /*background-image: url(../views/images/watercolorsidemodal.jpg);*/
-  /*border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.1) inset;
-  width: 300px;
-  margin-right: auto;
-  margin-left: auto;
-  display: table;*/
 }
 /*Admin Library*/
 .gridListdemoBasicUsage md-grid-list {
@@ -685,10 +737,11 @@ margin-top: -15px;
 /*--------------------------------     modals        --------------------------------*/
 .btn-primary{
   /*background-color: #5f3cb0;*/
-  background-color: #3FBFBF;
-  color: black;
+  background-color: white;
+  color: #3FBFBF;
   text-decoration: none;
   border-radius: 10px;
+  border-color: #3FBFBF;
 }
 .btn-primary:hover{
     background-color: #744CE8;
