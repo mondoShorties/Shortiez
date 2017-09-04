@@ -11,19 +11,19 @@
         <div class="storyCover">
           <img ng-src="{{story.story_cover}}" class="md-card-image" alt="{{story.story_title}}'s picture"></img>
         <p id="cardInfo">
-      <h4 id="storyTitleCard"> {{story.story_title}} </h4>
+      <h1 id="storyTitleCard"> {{story.story_title}} </h4>
       <h5 id="storyAuthor"> Author: {{story.story_authorF}} {{story.story_authorL}} </h5>
       <!-- <h4 id="storyAuthorClass"> Class: {{story.story_class}} </h4> -->
       <!-- <p id="storyDiscriptionCard"> {{story.story_description}} </p> -->
       </p>
       </div>
       <div class="md-actions" layout="row" layout-align="end center">
-        <md-button ng-click="selectReaderStory($index)" ng-show="userBtns" aria-label="tempPlaceholder" id="readBtn">read
-      </div>
-      <div class="md-actions" layout="row" layout-align="end center">
-        <md-button class="md-primary md-raised" ng-click="showAlert($event, story)"   >
+        <md-button class="md-primary md-raised" ng-click="showAlert($event, story)" id="summaryBtn"  >
           Summary
       </md-button>
+      </div>
+      <div class="md-actions" layout="row" layout-align="end center">
+        <md-button ng-click="selectReaderStory($index)" ng-show="userBtns" aria-label="tempPlaceholder" id="readBtn">read
       </div>
       <md-button ng-click="deleteStory($index)" ng-show="adminBtns" class="btn btn-danger"> Delete </md-button>
       <md-button ng-click="editStory($index)" ng-show="adminBtns" class="btn btn-primary" id="adminEditBtn"> Edit </md-button>

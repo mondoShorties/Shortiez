@@ -1,9 +1,12 @@
 <div class="loginCont" ng-controller="loginController">
   <!-- <img class="title" src="../views/images/shortiezlogoinvert.png" alt="Shortiez Logo" /> -->
 <div id="loginBox">
-  <!-- <h3>Login</h3> -->
-
-    <form action="/login" method="post">
+    <form class="loginForm" action="/login" method="post">
+      <div class="loginInput">
+        <h1 id="loginText">I am</h1>
+        <input id="loginBox" type="text" name="loginInput" placeholder="amazing">
+        <h5 id="loginDesc">Enter any word to describe yourself!</h5>
+      </div>
     <div>
       <label for="username" hidden="hidden">Username</label>
       <input class="inputLogin" id="inputLogin" type="text" name="username" ng-model="userNameInfo" ng-init="userNameInfo='user'" id="username" hidden="hidden" >
@@ -14,9 +17,9 @@
       <input type="password" id="inputPassword" name="password" id="password" placeholder="Password" value="user" hidden="hidden">
 
     </div>
-    <div>
+    <div id="loginBtnDiv">
       <br>
-    <input id="loginBtn" class="btn btn-primary" type="submit" ng-click="setPrivileges()" name="name" value="LOGIN">
+    <input id="loginBtn" class="btn btn-primary" type="submit" ng-click="setPrivileges()" name="name" value="CONTINUE">
       <!-- <p>Are you new? Click Sign Up!</p> -->
       <!-- <button class="btn btn-primary"><a class="register" href="/#/register" hidden="hidden">Sign Up!</a></button> -->
 
