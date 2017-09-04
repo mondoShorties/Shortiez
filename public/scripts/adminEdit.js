@@ -52,14 +52,28 @@ $scope.showAlert = function(ev, story) {
   if (story.story_description == null) {
     story.story_description = '';
   }
+  /*
   $mdDialog.show(
+    
     $mdDialog.alert()
       .parent(angular.element(document.querySelector('#popupContainer')))
       .clickOutsideToClose(true)
-      .title(''+story.story_title)
+      // .title(''+story.story_title)
       // .htmlContent("<h1>html</h1><h4>works</h4>")
-      .htmlContent(
-        `<div> ${story.story_description} <br>
+
+      // .htmlContent(
+      //   `<div style="text-align: center;"> ${story.story_title} </div>
+      //   <div style="text-align: center;"> 
+      //   <br>${story.story_description} <br>
+      //   Love  ${story.story_ratings.love} <br>
+      //   Like  ${story.story_ratings.like} <br>
+      //   Dislike  ${story.story_ratings.dislike}
+      //   </div>`
+      // )
+      .templateURL(
+        `<div style="text-align: center;"> ${story.story_title} </div>
+        <div style="text-align: center;"> 
+        <br>${story.story_description} <br>
         Love  ${story.story_ratings.love} <br>
         Like  ${story.story_ratings.like} <br>
         Dislike  ${story.story_ratings.dislike}
@@ -69,6 +83,38 @@ $scope.showAlert = function(ev, story) {
       .ok('nice')
       .targetEvent(ev)
   );
+  */
+
+  $mdDialog.show({
+    controller: DialogController,
+    templateUrl: 'views/partials/summary.tmpl.html',
+    parent: angular.element(document.body),
+    targetEvent: ev,
+    clickOutsideToClose:true,
+    fullscreen: $scope.customFullscreen, // Only for -xs, -sm breakpoints.
+    locals: { story: story } 
+  })
+  .then(function(answer) {
+    $scope.status = 'You said the information was "' + answer + '".';
+  }, function() {
+    $scope.status = 'You cancelled the dialog.';
+  });
+
+  function DialogController($scope, $mdDialog, story) {
+    console.log('story::', story);
+    $scope.story = story;
+
+    $scope.hide = function() {
+      $mdDialog.hide();
+    };
+    $scope.cancel = function() {
+      $mdDialog.cancel();
+    };
+    $scope.answer = function(answer) {
+      $mdDialog.hide(answer);
+    };
+  }
+  
 };
 
 // opens the add new story view and sets whether or not a story

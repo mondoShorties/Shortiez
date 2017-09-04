@@ -184,6 +184,20 @@ myApp.factory('userData', ['$http', '$rootScope', '$location', '$route', functio
 myApp.factory('RatingFactory', ['$http', '$rootScope', '$location', '$route', function($http, $rootScope, $location, $route) {
 
   console.log(`ratingFactory initialized::`);
+
+    
+  let getAllStories = function() {
+    console.log('before getAllStories::  ', response);    
+    $http({
+      method: 'GET',
+      url: '/getStories',
+      }).then(function(response) {
+        console.log('RETRUN OF getStories !!! !!!!!  ::  ', response);        
+        // $rootScope.stories = response.data;
+      }); // end http GET
+  }; // end getStories
+
+
   var rateStory = function(rating) {
     console.log(`inside ratingFactory::`, rating);
     // $http.post('/rateStory/rate', rating ).then(function(response) {
@@ -192,12 +206,22 @@ myApp.factory('RatingFactory', ['$http', '$rootScope', '$location', '$route', fu
     // }); // end http GET
 
     $http.post("/rateStory/rate", rating).then(function(response){
-              contractorAccountObject.response = response.data;
               console.log('RETRUN OF POST RATING FUNCTION !!! !!!!!  ::  ', response);
+
+              $http.get("/getStories", rating).then(function(response){
+                console.log('RETRUN OF GET ALL STORIES !!! !!!!!  ::  ', response);
+                $rootScope.stories = response.data;                
+            });
+              
           });
+
+          
 
 
   }; //
+
+
+
 
   return {
     rateStory: rateStory

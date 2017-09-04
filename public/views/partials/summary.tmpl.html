@@ -1,0 +1,73 @@
+
+
+<style>
+    .story-title {
+        background-color: white;
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+        padding: 4px 3px;
+    }
+    .story-description {
+        background-color: white;
+        text-align: center;
+        font-size: 18px;
+        padding: 4px 3px 15px;
+        color: gray;
+        
+    }
+    .stats-heading {
+        text-align: center;
+        background-color: rgb(121, 200, 198);
+        font-size: 20px;
+        padding: 4px 3px;
+        color: white;
+
+    }
+    .story-stats {
+        text-align: center;
+        padding-top: 5px;
+    }
+    .summary-container {
+        
+    }
+    .stats-stats img {
+        height: 40px;
+        width: auto;
+    }
+</style>
+<md-dialog aria-label="Story Summary" class="fullscreen-dialog">
+        <md-dialog-content style="min-width:500px;min-height:200px;max-width:600px;">
+                
+  <div class="summary-container" layout="column">
+    <div class="story-title" flex>{{story.story_title}}</div>
+    <div class="story-description" flex>{{story.story_description}}</div>
+    <div class="stats-heading" flex>Stats</div>
+    <div class="stats-stats" style="background-color: green;" flex>
+        <div layout="row">
+            <div flex>
+                    <div layout="column">
+                            <div class="story-title" flex><img src="../views/images/rating/like.png" alt=""></div>
+                            <div class="story-description" flex>{{story.story_ratings.like}}</div>
+                    </div>
+            </div>
+            <div flex>
+                <div layout="column">
+                        <div class="story-title" flex><img src="../views/images/rating/love.png" alt=""></div>
+                        <div class="story-description" flex>{{story.story_ratings.love}}</div>
+                </div>
+            </div>
+            <div flex>
+                    <div layout="column">
+                        <div class="story-title" flex><img src="../views/images/rating/dislike.png" alt=""></div>
+
+                        <div class="story-description" flex>{{story.story_ratings.dislike}}</div>
+                    </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+</md-dialog-content>
+        
+  </md-dialog>

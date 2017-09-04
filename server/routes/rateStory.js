@@ -37,7 +37,7 @@ router.post('/rate', function(req, res) {
       story.story_ratings.love += 1;
     } else if (req.body.rating.rating == 'dislike') {
       console.log("inside if (req.body.rating == 'dislike'), story.story_ratings.love:::", story.story_ratings.love);
-      story.story_ratings.love = story.story_ratings.love + 1;
+      story.story_ratings.love = story.story_ratings.dislike += 1;
     }
     console.log("before story.save, story.story_ratings:::", story.story_ratings);
     story.markModified('story_ratings');
@@ -48,7 +48,7 @@ router.post('/rate', function(req, res) {
       } else {
         console.log('2nd INSIDE accept after save on server story:', story);
       }
-      // res.json({ message: 'story updated with rating!' });
+      res.json({ message: 'story updated with rating!' });
     });
   });
 });

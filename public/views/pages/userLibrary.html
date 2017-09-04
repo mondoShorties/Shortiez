@@ -33,7 +33,7 @@
                   <div class="{{sizeClass}}">
                     <div class="titlePage"
                     <h1>{{readerIndex.story_title}}</h1>
-                    <h4> Rating: {{readerIndex.story_ratings}} </h4>
+                    <!-- <h4> Rating: {{readerIndex.story_ratings}} </h4> -->
                   </div>
                   <div class="navBtns">
                     <button class="btn toggleButton"type="button" name="button" ng-click="toggle()">Change Font</button>
@@ -58,16 +58,15 @@
                   <div class="rating">
                     <div>
                       <form ng-controller="userStoryController" ng-cloak>
-                        <p>Selected Value: <span class="radioValue">{{ data.group1 }}</span> </p>
-
-                        <md-radio-group ng-model="data.group1">
-
+                        <!-- <p>Selected Value: <span class="radioValue">{{ data.group1 }}</span> </p> -->
+                        
+                        <md-radio-group ng-model="data.group1" layout="row">
                           <md-radio-button value="like" class="">Like</md-radio-button>
                           <md-radio-button value="love"> Love </md-radio-button>
                           <md-radio-button value="dislike">Dislike</md-radio-button>
-
+                          <span style="width:.1em"></span>
+                          <button class="btn btn-success btn-small" ng-click="rateStory(currentStory, {rating: data.group1})" type="button">Submit</button>                          
                         </md-radio-group>
-                        <md-button class="md-raised" ng-click="rateStory(currentStory, {rating: data.group1})" type="button">Submit</md-button>
                 </form>
               </div>
             </div>

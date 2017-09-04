@@ -169,9 +169,7 @@ $scope.largeFont = function() {
 
 // RATING STUFF
 $scope.data = {
-      group1 : 'Love',
-      group2 : '2',
-      group3 : 'avatar-1'
+      group1 : false
     };
 
     $scope.avatarData = [{
@@ -200,9 +198,14 @@ $scope.data = {
       data.story = story;
       data.rating = rate;
 
-      let name = `birdie`;
       console.log(`I'm in $scope.rateStory::`, data);
-      RatingFactory.rateStory(data);
+      console.log(`I'm in $scope.rateStory, rate.rating::`, rate.rating);              
+      if (rate.rating) {
+        console.log('about to submit rating::')
+        RatingFactory.rateStory(data);        
+      } else{
+        alert('Oops, you forgot to select a rating');        
+      }
     };
 
     $scope.addItem = function() {
